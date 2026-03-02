@@ -29,17 +29,11 @@ class ProductRelationWidgetFactory extends AbstractFactory
         return $this->getProvidedDependency(ProductRelationWidgetDependencyProvider::PLUGIN_CART_PAGE_UP_SELLING_PRODUCTS_WIDGETS);
     }
 
-    /**
-     * @return \SprykerShop\Yves\ProductRelationWidget\Dependency\Client\ProductRelationWidgetToProductRelationStorageClientInterface
-     */
     public function getProductRelationStorageClient(): ProductRelationWidgetToProductRelationStorageClientInterface
     {
         return $this->getProvidedDependency(ProductRelationWidgetDependencyProvider::CLIENT_PRODUCT_RELATION_STORAGE);
     }
 
-    /**
-     * @return \SprykerShop\Yves\ProductRelationWidget\Dependency\Client\ProductRelationWidgetToStoreClientInterface
-     */
     public function getStoreClient(): ProductRelationWidgetToStoreClientInterface
     {
         return $this->getProvidedDependency(ProductRelationWidgetDependencyProvider::CLIENT_STORE);

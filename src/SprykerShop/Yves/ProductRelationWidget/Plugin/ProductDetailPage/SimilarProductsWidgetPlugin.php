@@ -19,11 +19,6 @@ use SprykerShop\Yves\ProductRelationWidget\Widget\SimilarProductsWidget;
  */
 class SimilarProductsWidgetPlugin extends AbstractWidgetPlugin implements SimilarProductsWidgetPluginInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     *
-     * @return void
-     */
     public function initialize(ProductViewTransfer $productViewTransfer): void
     {
         $widget = new SimilarProductsWidget($productViewTransfer);
@@ -33,17 +28,11 @@ class SimilarProductsWidgetPlugin extends AbstractWidgetPlugin implements Simila
         $this->addWidgets($this->getFactory()->getProductDetailPageSimilarProductsWidgetPlugins());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return static::NAME;
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return SimilarProductsWidget::getTemplate();

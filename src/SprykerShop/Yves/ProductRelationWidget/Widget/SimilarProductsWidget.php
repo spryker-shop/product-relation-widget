@@ -15,26 +15,17 @@ use Spryker\Yves\Kernel\Widget\AbstractWidget;
  */
 class SimilarProductsWidget extends AbstractWidget
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     */
     public function __construct(ProductViewTransfer $productViewTransfer)
     {
         $this->addParameter('product', $productViewTransfer)
             ->addParameter('productCollection', $this->findRelatedProducts($productViewTransfer));
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'SimilarProductsWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductRelationWidget/views/pdp-similar-products-carousel/pdp-similar-products-carousel.twig';

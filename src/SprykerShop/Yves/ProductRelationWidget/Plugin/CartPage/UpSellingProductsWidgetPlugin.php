@@ -19,11 +19,6 @@ use SprykerShop\Yves\ProductRelationWidget\Widget\UpSellingProductsWidget;
  */
 class UpSellingProductsWidgetPlugin extends AbstractWidgetPlugin implements UpSellingProductsWidgetPluginInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return void
-     */
     public function initialize(QuoteTransfer $quoteTransfer): void
     {
         $widget = new UpSellingProductsWidget($quoteTransfer);
@@ -33,17 +28,11 @@ class UpSellingProductsWidgetPlugin extends AbstractWidgetPlugin implements UpSe
         $this->addWidgets($this->getFactory()->getCartPageUpSellingProductsWidgetPlugins());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return static::NAME;
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return UpSellingProductsWidget::getTemplate();

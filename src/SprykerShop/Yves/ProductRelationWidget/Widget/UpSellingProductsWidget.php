@@ -15,9 +15,6 @@ use Spryker\Yves\Kernel\Widget\AbstractWidget;
  */
 class UpSellingProductsWidget extends AbstractWidget
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     */
     public function __construct(QuoteTransfer $quoteTransfer)
     {
         $this->addParameter('quote', $quoteTransfer)
@@ -27,17 +24,11 @@ class UpSellingProductsWidget extends AbstractWidget
         $this->addWidgets($this->getFactory()->getCartPageUpSellingProductsWidgetPlugins());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'UpSellingProductsWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductRelationWidget/views/cart-similar-products-carousel/cart-similar-products-carousel.twig';
