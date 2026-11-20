@@ -1,5 +1,7 @@
 {% extends template('similar-products', 'ProductRelationWidget') %}
 
 {% define data = {
-    products: _widget.productCollection | default([])
+    products: _widget.productCollection | default([]),
+    itemListId: 'cart_upselling',
+    itemListName: 'Cart upselling',
 } %}
